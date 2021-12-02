@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+echo creditaccess
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/creditaccess /home/pannet1/Backup/hosting/home/
+echo kkk
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/kkk /home/pannet1/Backup/hosting/home/
+echo srestates
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/srestates /home/pannet1/Backup/hosting/home/
+echo swethaag
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/swethaag /home/pannet1/Backup/hosting/home/
+echo ecomsense
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /home/pannet1/Backup/hosting/home/
+echo ecomsense.in
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense.in /home/pannet1/Backup/hosting/home/
+echo ecomsense
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /home/pannet1/Backup/hosting/home/
