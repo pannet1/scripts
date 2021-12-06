@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 fm="/home/pannet1";
-to="/media/pannet1/FAT32/latest";
+to="/run/media/pannet1/FAT32/latest";
 
 if [ -d "$to" ]; then
     echo "copying ... Personal"
