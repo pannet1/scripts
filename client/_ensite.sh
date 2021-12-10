@@ -8,10 +8,9 @@ fi
 
 whoisme="$(logname)";
 echo "i am "$whoisme;
-
-mnt="FAT32/local";
-web="/var/www/html";
-bkp="/home/$whoisme/Backup/hosting/home";
+mnt="/run/media/pannet1/FAT32"
+bkp="$mnt/latest/Programs/php"
+web="/home/$whoisme/Programs/php";
 src="$bkp/$1/";
 
 if [ -d "$src" ]; then
@@ -40,18 +39,12 @@ else
 chown "${whoisme}.${whoisme}" $web/$1 -Rv 
 
 
-cp /home/$whoisme/Scripts/client/virtual_host /etc/apache2/sites-available/$1.conf
-sed -i "s/default/$1/g" /etc/apache2/sites-available/$1.conf
-a2ensite $1
-
-service apache2 restart
-
+cp /home/$whoisme/Scripts/client/virtual_host /etc/httpd/conf/sites-available/$1.conf
+sed -i "s/default/$1/g" /etc/httpd/conf/sites-available/$1.conf
+cd /etc/httpd/conf/
+ln -s sites-available/$1.conf sites-enabled/$1.conf
+systemctl restart httpd
 
 cd $web/$1
-
-grep -r "$1" /etc/apache2/sites-available/
-
-
 echo "127.0.0.1 $1" >> /etc/hosts
-
-service network-manager restart
+grep -r "$1" /etc/httpd/conf/sites-available/

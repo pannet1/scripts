@@ -8,8 +8,6 @@ rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'ven
 echo swethaag
 rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/swethaag /home/pannet1/Backup/hosting/home/
 echo ecomsense
-rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /home/pannet1/Backup/hosting/home/
-echo ecomsense.in
-rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense.in /home/pannet1/Backup/hosting/home/
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /run/media/pannet1/FAT32/latest/Programs/php/
 echo ecomsense
-rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /home/pannet1/Backup/hosting/home/
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /run/media/pannet1/FAT32/latest/Programs/php/

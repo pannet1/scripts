@@ -1,25 +1,25 @@
 <VirtualHost *:80>
 	ServerAdmin root@localhost
         ServerName "default"	
-	DocumentRoot /var/www/html/default/web
+	DocumentRoot /home/pannet1/Programs/php/default/web
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride All
 	</Directory>
-	<Directory /var/www/html/default/web>
+	<Directory /home/pannet1/Programs/php/default/web>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
 		allow from all
 	</Directory>
 
-	ErrorLog /var/www/html/default/log/error.log
+ErrorLog /home/pannet1/Programs/php/default/log/error.log
 
 	# Possible values include: debug, info, notice, warn, error, crit,
 	# alert, emerg.
 	LogLevel warn
 
-	CustomLog /var/www/html/default/log/access.log combined
+	CustomLog /home/pannet1/Programs/php/default/log/access.log combined
 	ServerSignature On
 
 </VirtualHost>
