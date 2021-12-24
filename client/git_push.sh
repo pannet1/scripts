@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 git add .
 if [ -z "$1" ]; then 
     git commit -am "no comments"
