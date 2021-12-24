@@ -1,0 +1,1 @@
+sudo netselect-apt
