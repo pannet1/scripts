@@ -11,3 +11,13 @@ echo ecomsense
 rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /run/media/pannet1/FAT32/latest/Programs/php/
 echo ecomsense
 rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/ecomsense /run/media/pannet1/FAT32/latest/Programs/php/
+echo phpmyadmin
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/phpmyadmin /run/media/pannet1/FAT32/latest/Programs/php/
+echo creditaccess
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/creditaccess /run/media/pannet1/FAT32/latest/Programs/php/
+echo test2trade
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/test2trade /run/media/pannet1/FAT32/latest/Programs/php/
+echo httrack
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/httrack /run/media/pannet1/FAT32/latest/Programs/php/
+echo httrack
+rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/httrack /run/media/pannet1/FAT32/latest/Programs/php/

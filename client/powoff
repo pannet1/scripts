@@ -9,3 +9,4 @@ if [ -d "$to" ]; then
     echo "copying ... Archive"
     rsync --archive --size-only --update --delete --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' --exclude 'node_modules' $fm/Archive $to/
 fi
+ shutdown --poweroff
