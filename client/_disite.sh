@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ $# -eq 0 ]
  then 
@@ -9,14 +9,13 @@ fi
 whoisme="$(logname)";
 echo "i am "$whoisme;
 
-mnt="/run/media/pannet1/FAT32"
-bkp="$mnt/latest/Programs/php"
-web="/var/www/html";
+bkp="/home/$whoisme/Archive/hosting/home"
+web="/home/$whoisme/Programs/php"
 dest=$bkp/$1
 
 if [ -d "$dest" ]; then  
    echo "directory exists and will be synced."              
-     rsync -avvz --update  --exclude --stats --progress '.*' $web/$1/ $bkp/$1
+     rsync -avvz --delete --stats --progress '.*' $web/$1/ $bkp/$1
    echo "directory existed and was synced."              
 else
     echo "no directory found. copying"

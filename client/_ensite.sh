@@ -8,9 +8,8 @@ fi
 
 whoisme="$(logname)";
 echo "i am "$whoisme;
-mnt="/run/media/pannet1/FAT32"
-bkp="$mnt/latest/Programs/php"
-web="/home/$whoisme/Programs/php";
+bkp="/home/$whoisme/Archive/hosting/home"
+web="/home/$whoisme//Programs/php";
 src="$bkp/$1";
 
 if [ -d "$src" ]; then
@@ -34,12 +33,12 @@ else
  fi
 
 echo "echo $1" >> /home/$whoisme/Scripts/client/rsyncronjobs
-echo "rsync --archive --update --delete --force --stats --exclude 'tmp' --exclude 'vendor' --exclude 'composer.lock' /var/www/html/$1 $bkp/" >> /home/$whoisme/Scripts/client/rsyncronjobs
-chown "${whoisme}.${whoisme}" $web/$1 -Rv 
+echo "rsync --update --delete --stats --exclude='tmp' --exclude='vendor' --exclude='composer.lock' --exclude='node_modules' /var/www/html/$1 $bkp/" >> /home/$whoisme/Scripts/client/rsyncronjobs
+chown "${whoisme}:${whoisme}" $web/$1 -Rv 
 
 cp /home/$whoisme/Scripts/client/virtual_host /etc/httpd/conf/sites-available/$1.conf
 sed -i "s/default/$1/g" /etc/httpd/conf/sites-available/$1.conf
-sudo chown "${whoisme}.${whoisme}" $web/$1 -Rv 
+sudo chown "${whoisme}:${whoisme}" $web/$1 -Rv 
 cd /etc/httpd/conf/sites-enabled/
 sudo ln -s ../sites-available/$1.conf $1.conf
 

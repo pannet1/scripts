@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#!/usr/bin/sh
 
 if [ $# -eq 0 ]
  then 

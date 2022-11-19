@@ -12,4 +12,4 @@ read -p "Please enter the desired quality code: " FORMAT
 
 echo "Streaming with quality $FORMAT..."
 youtube-dl -f$FORMAT $url
-mpv --cache=1024 $(youtube-dl -f $FORMAT -g "$url")
+mpv --cache=auto $(youtube-dl -f $FORMAT -g "$url")
