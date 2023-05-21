@@ -17,9 +17,10 @@ to="/run/media/pannet1/FAT32/latest";
     /usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Documents" google:Documents
     echo "Sync Pictures to Grive"
     /usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Pictures" google:Pictures
-    #library
-    #/usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Yandex.Disk" yandex:
-    #Videos
-    #/usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Videos" pcloud:
-
+    echo "Sync Library to yandex"
+    /usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Yandex.Disk" yandex:
+    echo "Sync Videos to pcloud"
+    # /usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/home/pannet1/Videos" pcloud:
+    echo "Sync omki to onedrive"
+    /usr/bin/rclone copy --update --verbose --transfers=30 --checkers=8 --contimeout=60s --timeout=300s --retries=5 --low-level-retries=10 --stats 1s "/run/media/pannet1/extra/wedding" msn:
 shutdown --poweroff
