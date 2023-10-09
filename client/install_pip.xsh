@@ -2,9 +2,7 @@
 
 # Check if the number of arguments is more than one
 if len($ARGS) > 1:
-    # Extract sublist starting from the second item
-    sublist = $ARGS[1:]
-    for item in sublist:
-      pip install @(item)
+    lst = $ARGS
+    grep -rw lst[0] -e lst[1]
 else:
-  print("argumment is missing")
+  print("usage is '/search/dir/' 'pattern'")
