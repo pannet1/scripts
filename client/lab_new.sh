@@ -19,7 +19,7 @@ else
 	git init
 	git add .
 	git commit -am "first commit"
-	git remote add origin "https://github.com/pannet1/$1.git"
+	git remote add origin "https://gitlab.com/pannet12/$1.git"
 	git branch -M main
 	git push -u origin main
 fi
