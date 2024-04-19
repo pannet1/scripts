@@ -16,6 +16,10 @@ if [ "$directory_name" != "$1" ]; then
 else
 	cp ~/Scripts/client/.gitignore . -uv
 	cp ~/Scripts/client/requirements.txt . -uv
+	cp ~/Scripts/client/run_algo.bat . -uv
+	cp ~/Scripts/client/update.bat . -uv
+	cp ~/Scripts/client/tmux.sh . -uv
+	cp ~/Scripts/client/show.sh . -uv
 	git init
 	git add .
 	git commit -am "first commit"

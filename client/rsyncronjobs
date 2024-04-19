@@ -42,3 +42,5 @@ echo srestates
 rsync --update --delete --stats --exclude='tmp' --exclude='vendor' --exclude='composer.lock' --exclude='node_modules' /var/www/html/srestates /home/pannet1/Archive/hosting/home/
 echo billing.local
 rsync --update --delete --stats --exclude='tmp' --exclude='vendor' --exclude='composer.lock' --exclude='node_modules' /var/www/html/billing.local /home/pannet1/Archive/hosting/home/
+echo ecomsense
+rsync --update --delete --stats --exclude='tmp' --exclude='vendor' --exclude='composer.lock' --exclude='node_modules' /var/www/html/ecomsense /home/pannet1/Archive/hosting/home/
